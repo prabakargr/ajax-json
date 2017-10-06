@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({
+        	url:"data.json",
+        	dataType:"json",
+            success:function(result){
+            	console.log(result);
+            	$("#name").html(result.Name);
+            	$("#age").html(result.Age);
+            	$("#place").html(result.Place)
+            }
+        });
+    });
+});
